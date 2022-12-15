@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
@@ -19,5 +20,10 @@
     "standard": "^17.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./nodel_modules/standard/eslintrc.json"
+    ]
   }
 }

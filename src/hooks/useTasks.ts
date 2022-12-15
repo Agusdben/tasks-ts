@@ -9,9 +9,28 @@ const useTasks = () => {
     setTasks([...tasks, task])
   }
 
+  const removeTask = (id: number): void => {
+    setTasks(tasks.filter((t: Task): Boolean => t.id !== id))
+  }
+
+  const handleDone = (id: number): void => {
+    setTasks(
+      tasks.map((t: Task): Task => (t.id === id ? { ...t, done: !t.done } : t))
+    )
+  }
+
+  const handleEdit = (id: number, description: string): void => {
+    setTasks(
+      tasks.map((t: Task): Task => (t.id === id ? { ...t, description } : t))
+    )
+  }
+
   return {
     tasks,
-    addNewTask
+    addNewTask,
+    removeTask,
+    handleDone,
+    handleEdit
   }
 }
 

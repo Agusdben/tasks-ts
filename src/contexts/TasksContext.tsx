@@ -1,10 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { Task } from '../types/Task'
-
-interface ContextValue {
-  tasks: Task[]
-  setTasks: React.Dispatch<React.SetStateAction<Task[]>>
-}
+import { TasksContext as ContextValue } from '../types/TasksContext'
 
 export const TasksContext = createContext<ContextValue>({
   tasks: [],
