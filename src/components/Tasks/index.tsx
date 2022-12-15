@@ -4,6 +4,7 @@ import TasksList from '../TasksList'
 
 const Tasks: React.FC = () => {
   const { tasks } = useTasks()
+
   return (
     <section>
       <TasksList tasks={tasks} />

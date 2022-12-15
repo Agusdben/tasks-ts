@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import useInputText from '../../hooks/useInputText'
 import useTasks from '../../hooks/useTasks'
 import { Task } from '../../types/Task'
+// icons
 import { BsPencilSquare } from 'react-icons/bs'
 import { BiTrashAlt } from 'react-icons/bi'
 import { AiOutlineCheckSquare, AiFillCheckSquare } from 'react-icons/ai'
+
 interface Props {
   task: Task
 }
