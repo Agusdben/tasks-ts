@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { TasksContext } from '../contexts/TasksContext'
-import { Task } from '../models/Task.model'
+import { Task } from '../types/Task.model'
 
 const useTasks = () => {
   const { tasks, setTasks } = useContext(TasksContext)

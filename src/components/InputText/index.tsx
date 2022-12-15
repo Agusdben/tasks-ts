@@ -1,5 +1,5 @@
 import React from 'react'
-import { InputText as InputTextI } from '../../models/InputText.model'
+import { InputText as InputTextI } from '../../types/InputText.model'
 
 interface Props {
   input: InputTextI

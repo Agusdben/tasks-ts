@@ -1,7 +1,7 @@
 import React from 'react'
 import useInputText from '../../hooks/useInputText'
 import useTasks from '../../hooks/useTasks'
-import { Task } from '../../models/Task.model'
+import { Task } from '../../types/Task.model'
 import InputText from '../InputText'
 
 const FormTask: React.FC = () => {

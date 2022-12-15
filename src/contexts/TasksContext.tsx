@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import { Task } from '../models/Task.model'
+import { Task } from '../types/Task.model'
 
 interface ContextValue {
   tasks: Task[]
