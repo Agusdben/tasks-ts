@@ -1,5 +1,5 @@
 import React from 'react'
-import { Task } from '../../types/Task.model'
+import { Task } from '../../types/Task'
 
 interface Props {
   tasks: Task[]

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { InputText } from '../types/InputText.model'
+import { InputText } from '../types/InputText'
 
 interface Props {
   initialValue: string
