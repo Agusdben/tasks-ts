@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: .5rem;
+}
+
+.footer__credits {
+  padding: 0;
+  margin: 0;
+}
+
+.footer__author {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.footer__links {
+  display: flex;
+  gap: .5rem;
+
+}
+
+.footer__links a {
+  color: var(--font-color);
+}

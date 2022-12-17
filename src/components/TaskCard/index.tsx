@@ -3,9 +3,14 @@ import useInputText from '../../hooks/useInputText'
 import useTasks from '../../hooks/useTasks'
 import { Task } from '../../types/Task'
 // icons
-import { BsPencilSquare } from 'react-icons/bs'
 import { BiTrashAlt } from 'react-icons/bi'
-import { AiOutlineCheckSquare, AiFillCheckSquare } from 'react-icons/ai'
+import {
+  AiOutlineCheckSquare,
+  AiFillCheckSquare,
+  AiFillEdit
+} from 'react-icons/ai'
+
+import './TaskCard.css'
 
 interface Props {
   task: Task
@@ -33,27 +38,41 @@ const TaskCard: React.FC<Props> = ({ task }) => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmitEdit}>
+    <div className='task-card'>
+      <form className='task-card__form' onSubmit={handleSubmitEdit}>
         {isEditing ? (
-          <input {...editTask} autoFocus onBlur={handleSubmitEdit} />
+          <input
+            className='task-card__task'
+            {...editTask}
+            autoFocus
+            onBlur={handleSubmitEdit}
+          />
         ) : (
-          <p>{task.description}</p>
+          <p
+            style={{ textDecoration: task.done ? 'line-through' : '' }}
+            className='task-card__task'
+          >
+            {task.description}
+          </p>
         )}
       </form>
       <div>
         <button type='button' onClick={() => removeTask(task.id)}>
-          <BiTrashAlt />
+          <BiTrashAlt className='icon' />
         </button>
         <button
           type='button'
           onClick={() => setIsEditing(!isEditing)}
           disabled={isEditing || task.done}
         >
-          <BsPencilSquare />
+          <AiFillEdit className='icon' />
         </button>
         <button type='button' onClick={() => handleDone(task.id)}>
-          {task.done ? <AiFillCheckSquare /> : <AiOutlineCheckSquare />}
+          {task.done ? (
+            <AiFillCheckSquare className='icon' />
+          ) : (
+            <AiOutlineCheckSquare className='icon' />
+          )}
         </button>
       </div>
     </div>

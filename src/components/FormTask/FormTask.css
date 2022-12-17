@@ -1,0 +1,21 @@
+.form-task {
+  flex: 1;
+  display: flex;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.form-task input {
+  flex: 1;
+  color: var(--secondary-color);
+  background-color: transparent;
+
+}
+
+.form-task__submit {
+  color: var(--primary-color);
+}
+
+.form-task__submit:hover {
+  transition: transform 800ms linear;
+  transform: translateX(5px);
+}

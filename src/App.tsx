@@ -1,19 +1,19 @@
 import React from 'react'
-import FormTask from './components/FormTask'
 import Tasks from './components/Tasks'
+import Header from './components/Header'
 import TasksContextProvider from './contexts/TasksContext'
+import './App.css'
+import Footer from './components/Footer'
 
 const App: React.FC = () => {
   return (
     <TasksContextProvider>
       <div className='app'>
-        <header>
-          <h1>Tasky</h1>
-          <FormTask />
-        </header>
-        <main>
+        <Header />
+        <main className='app__main'>
           <Tasks />
         </main>
+        <Footer />
       </div>
     </TasksContextProvider>
   )

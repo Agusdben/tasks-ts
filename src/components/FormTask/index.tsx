@@ -3,6 +3,9 @@ import useInputText from '../../hooks/useInputText'
 import useTasks from '../../hooks/useTasks'
 import { Task } from '../../types/Task'
 import InputText from '../InputText'
+import { AiOutlineSend } from 'react-icons/ai'
+
+import './FormTask.css'
 
 const FormTask: React.FC = () => {
   const { addNewTask } = useTasks()
@@ -33,9 +36,11 @@ const FormTask: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleAddTask}>
+    <form className='form-task' onSubmit={handleAddTask}>
       <InputText input={taskInput} />
-      <button type='submit'>+</button>
+      <button className='form-task__submit' type='submit'>
+        <AiOutlineSend />
+      </button>
     </form>
   )
 }

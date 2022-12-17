@@ -1,0 +1,19 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.task-list__item {
+  padding: .5rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.task-list__item:nth-child(even) {
+  background-color: var(--primary-color);
+}
+
+.task-list__item:nth-child(odd) {
+  background-color: var(--secondary-color);
+}
